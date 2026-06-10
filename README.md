@@ -1,3 +1,4 @@
+
 # Placement Prediction using Machine Learning
 
 This project focuses on predicting student placement and salary in campus recruitment using Random Forest classifiers. The goal is to help students and educational institutions understand the factors that influence placement success and expected salary.
@@ -121,3 +122,6 @@ Contributions are welcome! Please feel free to submit a Pull Request or open an 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+# student_placement_prediction_using_machine_learning
+Student placement prediction using ML models to classify whether a student will be placed based on academic performance and skills data.
+
