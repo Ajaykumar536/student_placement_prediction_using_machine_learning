@@ -5,7 +5,7 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import preprocessing
-df = pd.read_csv('dataa.csv')
+df = pd.read_csv('Salary_prediction_data.csv')
 df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
 df.fillna(0,inplace=True)
 x=df.drop(['StudentId','salary'],axis=1)
@@ -17,6 +17,7 @@ x['PlacementStatus']=le.fit_transform(x['PlacementStatus'])
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.3, random_state = 100)
 from sklearn.naive_bayes import GaussianNB
 classify= RandomForestClassifier(n_estimators= 100, criterion="entropy")
+print(x.columns)
 classify.fit(x_train, y_train)
 ypred=classify.predict(x_test)
 from sklearn.metrics import accuracy_score
